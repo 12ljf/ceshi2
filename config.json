@@ -1,0 +1,56 @@
+{
+    "application": {
+        "name": "BIRobot",
+        "version": "2.0.0",
+        "debug_mode": false,
+        "log_level": "INFO"
+    },
+    "mqtt": {
+        "broker": "47.107.36.182",
+        "port": 1883,
+        "client_id": "USER001",
+        "username": "public",
+        "password": "UQU92K77cpxc2Tm",
+        "topic_publish": "USER001",
+        "topic_subscribe": "USER002",
+        "keepalive": 60,
+        "reconnect_delay": 5,
+        "max_reconnect_attempts": 10
+    },
+    "video": {
+        "default_width": 1280,
+        "default_height": 720,
+        "fps_limit": 30,
+        "skip_frames": 2,
+        "recording_fps": 20
+    },
+    "yolo": {
+        "model_path": "yolov8n.pt",
+        "confidence_threshold": 0.7,
+        "enable_debug": false
+    },
+    "sensors": {
+        "max_data_points": 50,
+        "update_interval": 1000
+    },
+    "ui": {
+        "window_title": "BIRobot 机器蛇智能控制系统",
+        "default_width": 1920,
+        "default_height": 1080,
+        "theme": "dark"
+    },
+    "air_quality": {
+        "levels": [
+            {"name": "优秀", "min": 0, "max": 50, "color": "#00FF88"},
+            {"name": "良好", "min": 51, "max": 100, "color": "#00D4FF"},
+            {"name": "一般", "min": 101, "max": 150, "color": "#FFD700"},
+            {"name": "较差", "min": 151, "max": 200, "color": "#FF8C00"},
+            {"name": "危险", "min": 201, "max": 500, "color": "#FF6B6B"}
+        ]
+    },
+    "gait_modes": [
+        {"name": "蠕动模式", "color": "#00FF88"},
+        {"name": "蜿蜒模式", "color": "#FF8C00"},
+        {"name": "复位模式", "color": "#FF6B6B"}
+    ]
+}
